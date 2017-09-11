@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/events" method="POST" resourcePath="/mhawley/mtg-tournaments/1.0.0/events" id="b6800b2c-e2d4-4525-a2ed-7bceaf06f663" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="b6800b2c-e2d4-4525-a2ed-7bceaf06f663fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fevents1</con:setting></con:settings><con:defaultResponse>400 Response - Invalid Input</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchConfig/><con:dispatchPath><![CDATA[import groovy.json.JsonSlurper
 
-// Match based on body
 def jsonSlurper = new JsonSlurper() 
 def requestBody = mockRequest.getRequestContent()
 def request = jsonSlurper.parseText(requestBody)
 
-//def event_name = request.name
-//def format = request.format
-//def no_of_players = request.no_of_players.toString()
-//def location = request.location
-//def date = request.date
+def checkEvent(Object event) {
+	if (event.containsKey("name") && 
+		event.containsKey("format") &&
+		event.containsKey("no_of_players") &&
+		event.containsKey("location") &&
+		event.containsKey("date") &&
+		event.containsKey("decks")
+	) {
+		checkDecks(event.decks)
+	}
+}
 
-//log.info no_of_players.getClass()
-if (request.containsKey("name") && 
-	request.containsKey("format") &&
-	request.containsKey("no_of_players") &&
-	request.containsKey("location") &&
-	request.containsKey("date") &&
-	request.containsKey("decks")) 
-{
+def checkDecks(Object decks) {
+	for (deck in decks) {
+		if (deck.containsKey("name") &&
+			deck.containsKey("player") &&
+			deck.containsKey("placing")
+		) {
+			checkCards(deck.cards)	
+		}	
+	}	
+}
+
+def checkCards(Object cards) {
+	for (card	in cards) {
+		log.info card
+		if (card.containsKey("name") &&
+			card.containsKey("no_played") &&
+			card.containsKey("colors") &&
+			card.containsKey("image_url") &&
+			card.containsKey("main_deck")
+		) {
+			return true	
+		}
+	}
+}
+
+if (checkEvent(request)){
 	return "Success - Post Event"
 } else {
 	return "400 Response - Invalid Input"	
