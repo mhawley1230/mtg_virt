@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/decks/{id}" path="/decks/{id}" id="80ce26b6-7a6a-4bce-9360-a304f1ed91d8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="80ce26b6-7a6a-4bce-9360-a304f1ed91d8fileName">%2Fdecks%2F%7Bid%7D</con:setting></con:settings><con:parameters><con:parameter required="true"><con:name>id</con:name><con:style>TEMPLATE</con:style><con:description>event id</con:description></con:parameter></con:parameters><con:method name="GET" id="2a33f2fb-aa54-46a5-a427-3c70b015ffca" method="GET"><con:description>Allows users to search for an event by id
+</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:sampleContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 256,
+    "name" : "UR Control",
+    "placing" : 1,
+    "player" : "Luis Scott-Vargas",
+    "cards" : [ {
+      "id" : 315,
+      "name" : "Torrential Gearhulk",
+      "no_played" : 3,
+      "colors" : "Blue",
+      "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+      "main_deck" : true
+    } ]
+  }
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:sampleContent>{
+  "status" : 400,
+  "message" : "Invalid value provided"
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:sampleContent>{
+  "status" : 404,
+  "message" : "Resource not found"
+}</con:sampleContent></con:representation><con:request name="Request 1" id="53f22c7c-eaef-4124-b87f-33e21781d058" mediaType="application/json"><con:settings/><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource>

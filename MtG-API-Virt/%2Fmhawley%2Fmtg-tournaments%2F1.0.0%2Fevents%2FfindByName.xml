@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/events/findByName" method="GET" resourcePath="/mhawley/mtg-tournaments/1.0.0/events/findByName" id="90b9a426-0776-4538-8a0c-83344d2376d9" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="90b9a426-0776-4538-8a0c-83344d2376d9fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fevents%2FfindByName</con:setting></con:settings><con:defaultResponse>400 Response - Invalid Input</con:defaultResponse><con:dispatchStyle>SCRIPT</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:parameterDispatcherRuleContainer><con:ParameterDispatcherRule><con:ruleName>Rule 1</con:ruleName><con:parameterDispatcherCondition><con:parameterType>QUERY</con:parameterType><con:parameterOperationType>EQUALS</con:parameterOperationType><con:parameterName>name</con:parameterName><con:parameterValue>Friday Night Magic</con:parameterValue></con:parameterDispatcherCondition><con:responseName>Success - Get Event by Name</con:responseName></con:ParameterDispatcherRule><con:ParameterDispatcherRule><con:ruleName>Rule 2</con:ruleName><con:parameterDispatcherCondition><con:parameterType>QUERY</con:parameterType><con:parameterOperationType>NOT_EQUALS</con:parameterOperationType><con:parameterName>name</con:parameterName><con:parameterValue>Friday Night Magic</con:parameterValue></con:parameterDispatcherCondition><con:responseName>404 Response - Not Found</con:responseName></con:ParameterDispatcherRule></con:parameterDispatcherRuleContainer><con:routeScript/><con:response name="Success - Get Event by Name" id="e08cc996-3307-4bff-848d-63150e06494d" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "id": 222,
+  "name": "Friday Night Magic",
+  "format": "Standard",
+  "no_of_players": 200,
+  "location": "Boston, MA",
+  "date": "12/30/2017",
+  "decks": [
+    {
+      "id": 256,
+      "name": "UR Control",
+      "placing": 1,
+      "player": "Luis Scott-Vargas",
+      "cards": [
+        {
+          "id": 315,
+          "name": "Torrential Gearhulk",
+          "no_played": 3,
+          "colors": "Blue",
+          "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+          "main_deck": true
+        }
+      ]
+    }
+  ]
+}</con:responseContent></con:response><con:response name="400 Response - Invalid Input" id="7800fd6b-8bdd-4807-ab05-5a8c14a4777f" httpResponseStatus="400" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status": 400,
+  "message": "Invalid value provided"
+}</con:responseContent></con:response><con:response name="404 Response - Not Found" id="3d9b697b-4953-45ac-bed7-b59bf3f76622" httpResponseStatus="404" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status": 404,
+  "message": "Resource not found"
+}</con:responseContent></con:response></con:restMockAction>

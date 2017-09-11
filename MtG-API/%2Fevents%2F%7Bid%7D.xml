@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/events/{id}" path="/events/{id}" id="76609eba-4844-4072-9380-13321a359b1e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="76609eba-4844-4072-9380-13321a359b1efileName">%2Fevents%2F%7Bid%7D</con:setting></con:settings><con:parameters><con:parameter required="true"><con:name>id</con:name><con:style>TEMPLATE</con:style><con:description>event id</con:description></con:parameter></con:parameters><con:method name="GET" id="e21259e3-aeb5-406f-9019-6114e511a2b5" method="GET"><con:description>Allows users to search for an event by id
+</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:sampleContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 222,
+    "name" : "Friday Night Magic",
+    "format" : "Standard",
+    "no_of_players" : 200,
+    "location" : "Boston, MA",
+    "date" : "12/30/2017",
+    "decks" : [ {
+      "id" : 256,
+      "name" : "UR Control",
+      "placing" : 1,
+      "player" : "Luis Scott-Vargas",
+      "cards" : [ {
+        "id" : 315,
+        "name" : "Torrential Gearhulk",
+        "no_played" : 3,
+        "colors" : "Blue",
+        "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+        "main_deck" : true
+      } ]
+    } ]
+  }
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:sampleContent>{
+  "status" : 400,
+  "message" : "Invalid value provided"
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:sampleContent>{
+  "status" : 404,
+  "message" : "Resource not found"
+}</con:sampleContent></con:representation><con:request name="Request 1" id="5959e195-89a2-44f9-b654-77ae441ca2ea" mediaType="application/json"><con:settings/><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource>

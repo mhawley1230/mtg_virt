@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/decks/findByPlayer" method="GET" resourcePath="/mhawley/mtg-tournaments/1.0.0/decks/findByPlayer" id="78aaf9ec-4725-4648-86d5-80cf49f4da49" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="78aaf9ec-4725-4648-86d5-80cf49f4da49fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fdecks%2FfindByPlayer</con:setting></con:settings><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:routeScript/><con:response name="Success - Get Decks by Player" id="d92d16e7-d3db-48c1-a6be-91ed343a644f" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 256,
+    "name" : "UR Control",
+    "placing" : 1,
+    "player" : "Luis Scott-Vargas",
+    "cards" : [ {
+      "id" : 315,
+      "name" : "Torrential Gearhulk",
+      "no_played" : 3,
+      "colors" : "Blue",
+      "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+      "main_deck" : true
+    } ]
+  }
+}</con:responseContent></con:response><con:response name="400 Response - Invalid Input" id="c4484600-c06d-43fd-bde5-61af9d42ff8e" httpResponseStatus="400" mediaType="application/json" dataSource=""><con:settings/><con:responseContent/></con:response><con:response name="404 Response - Not Found" id="a972ee4e-34ab-4aaa-aa2f-d1e115ebb9c1" httpResponseStatus="404" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status": 404,
+  "message": "Resource not found"
+}</con:responseContent></con:response></con:restMockAction>

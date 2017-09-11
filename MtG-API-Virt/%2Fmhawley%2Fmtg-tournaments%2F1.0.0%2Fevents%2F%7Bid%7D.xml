@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/events/{id}" method="GET" resourcePath="/mhawley/mtg-tournaments/1.0.0/events/{id}" id="4c46ff77-28d6-4386-8a65-683c317ad4f9" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="4c46ff77-28d6-4386-8a65-683c317ad4f9fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fevents%2F%7Bid%7D</con:setting></con:settings><con:defaultResponse>Success - Get Event by ID</con:defaultResponse><con:dispatchStyle>PARAMETER</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:routeScript/><con:response name="Success - Get Event by ID" id="b831bd23-383a-4c25-8848-17ec597583c1" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 222,
+    "name" : "Friday Night Magic",
+    "format" : "Standard",
+    "no_of_players" : 200,
+    "location" : "Boston, MA",
+    "date" : "12/30/2017",
+    "decks" : [ {
+      "id" : 256,
+      "name" : "UR Control",
+      "placing" : 1,
+      "player" : "Luis Scott-Vargas",
+      "cards" : [ {
+        "id" : 315,
+        "name" : "Torrential Gearhulk",
+        "no_played" : 3,
+        "colors" : "Blue",
+        "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+        "main_deck" : true
+      } ]
+    } ]
+  }
+}</con:responseContent></con:response><con:response name="400 Response - Invalid Input" id="af299109-4d0f-44dc-8dee-c4b39d10b579" httpResponseStatus="400" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status" : 400,
+  "message" : "Invalid value provided"
+}</con:responseContent></con:response><con:response name="404 Response - Not Found" id="f149f26a-d17a-4578-8b89-2cf8dd846019" httpResponseStatus="404" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status": 404,
+  "message": "Resource not found"
+}</con:responseContent></con:response></con:restMockAction>

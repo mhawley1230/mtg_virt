@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/cards/{id}" path="/cards/{id}" id="780f2cdd-c6f3-47e7-8df9-d94c7b68cccc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="780f2cdd-c6f3-47e7-8df9-d94c7b68ccccfileName">%2Fcards%2F%7Bid%7D</con:setting></con:settings><con:parameters><con:parameter required="true"><con:name>id</con:name><con:style>TEMPLATE</con:style><con:description>event id</con:description></con:parameter></con:parameters><con:method name="GET" id="4cdbc399-8a02-419f-83f5-a28a04f3f223" method="GET"><con:description>Allows users to search for an event by id
+</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:sampleContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 315,
+    "name" : "Torrential Gearhulk",
+    "no_played" : 3,
+    "colors" : "Blue",
+    "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+    "main_deck" : true
+  }
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:sampleContent>{
+  "status" : 400,
+  "message" : "Invalid value provided"
+}</con:sampleContent></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:sampleContent>{
+  "status" : 404,
+  "message" : "Resource not found"
+}</con:sampleContent></con:representation><con:request name="Request 1" id="5b6a3bca-6770-4680-8464-dd52b2386f81" mediaType="application/json"><con:settings/><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters/></con:request></con:method></con:resource>

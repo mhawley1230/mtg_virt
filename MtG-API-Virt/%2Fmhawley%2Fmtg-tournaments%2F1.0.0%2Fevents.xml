@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/events" method="GET" resourcePath="/mhawley/mtg-tournaments/1.0.0/events" id="dd3f0939-0abe-45e4-84e3-921b847afc19" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="dd3f0939-0abe-45e4-84e3-921b847afc19fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fevents</con:setting></con:settings><con:defaultResponse>Success - Get All Events</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:parameterDispatcherRuleContainer/><con:routeScript/><con:response name="Success - Get All Events" id="5219b4c0-75c1-40c1-9c67-863e1b148b5b" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "id": 222,
+  "name": "Friday Night Magic",
+  "format": "Standard",
+  "no_of_players": 200,
+  "location": "Boston, MA",
+  "date": "12/30/2017",
+  "decks": [
+    {
+      "id": 256,
+      "name": "UR Control",
+      "placing": 1,
+      "player": "Luis Scott-Vargas",
+      "cards": [
+        {
+          "id": 315,
+          "name": "Torrential Gearhulk",
+          "no_played": 3,
+          "colors": "Blue",
+          "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+          "main_deck": true
+        }
+      ]
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction>

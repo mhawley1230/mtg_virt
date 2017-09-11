@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/mhawley/mtg-tournaments/1.0.0/cards/findByName" method="GET" resourcePath="/mhawley/mtg-tournaments/1.0.0/cards/findByName" id="ae857168-fbab-41ee-b2ac-3ae208730704" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ae857168-fbab-41ee-b2ac-3ae208730704fileName">%2Fmhawley%2Fmtg-tournaments%2F1.0.0%2Fcards%2FfindByName</con:setting></con:settings><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:routeScript/><con:response name="Success - Get Card by Name" id="7ab61a7f-6fd6-4c46-9316-59a72e4c8ed4" httpResponseStatus="200" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status" : 200,
+  "result" : {
+    "id" : 315,
+    "name" : "Torrential Gearhulk",
+    "no_played" : 3,
+    "colors" : "Blue",
+    "image_url" : "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+    "main_deck" : true
+  }
+}</con:responseContent></con:response><con:response name="400 Response - Invalid Input" id="c4698950-7bea-45a6-a0f3-66d264b3e44b" httpResponseStatus="400" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status" : 400,
+  "message" : "Invalid value provided"
+}</con:responseContent></con:response><con:response name="404 Response - Not Found" id="69c0951f-7d8e-4604-869c-418f5ef8a1d3" httpResponseStatus="404" mediaType="application/json" dataSource=""><con:settings/><con:responseContent>{
+  "status": 404,
+  "message": "Resource not found"
+}</con:responseContent></con:response></con:restMockAction>

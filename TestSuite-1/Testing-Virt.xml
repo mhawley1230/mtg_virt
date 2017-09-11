@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bb73811d-72c5-436a-a44e-c12b0790e50b" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Testing Virt" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="bb73811d-72c5-436a-a44e-c12b0790e50bfileName">Testing-Virt</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="REST Request" id="a55b1483-9ac5-4f52-95c9-ea2779caf7c7"><con:settings/><con:config service="MtG API" methodName="POST" resourcePath="/mhawley/mtg-tournaments/1.0.0/events" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="2e4606a8-f8ca-4cc5-8581-c6f2f035c736" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8090/</con:endpoint><con:request>{
+  "id": 222,
+  "name": "Friday Night Magic",
+  "format": "Standard",
+  "no_of_players": 200,
+  "location": "Boston, MA",
+  "date": "12/30/2017",
+  "decks": [
+    {
+      "id": 256,
+      "name": "UR Control",
+      "placing": 1,
+      "player": "Luis Scott-Vargas",
+      "cards": [
+        {
+          "id": 315,
+          "name": "Torrential Gearhulk",
+          "no_played": 3,
+          "colors": "Blue",
+          "image_url": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=420589&amp;type=card",
+          "main_deck": true
+        }
+      ]
+    }
+  ]
+}</con:request><con:originalUri>http://localhost/mhawley/mtg-tournaments/1.0.0/events</con:originalUri><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Request 1" id="00b480ed-1276-4167-afdd-85b876ac94ec"><con:settings/><con:config service="MtG API" resourcePath="/mhawley/mtg-tournaments/1.0.0/events/{id}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Request 1" id="5959e195-89a2-44f9-b654-77ae441ca2ea" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint><con:request/><con:originalUri>https://virtserver.swaggerhub.com/mhawley/mtg-tournaments/1.0.0/events/222</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="id" value="256" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GET - Request 1 2" id="ab32cada-4ded-498e-bb28-e1b8208cc59f"><con:settings/><con:config service="MtG API" resourcePath="/mhawley/mtg-tournaments/1.0.0/events/findByName" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - Request 1 2" id="f15a67da-663b-4bf1-b9b9-bb7a629c42c4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://virtserver.swaggerhub.com</con:endpoint><con:request/><con:originalUri>https://virtserver.swaggerhub.com/mhawley/mtg-tournaments/1.0.0/events/findByName</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="name" value="lhrgbq" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase>
